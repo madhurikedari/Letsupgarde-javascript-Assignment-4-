@@ -1,0 +1,233 @@
+Q.1
+---->
+//Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5. 
+
+
+for (let i = 0; i < 100; i+-+-) {
+    if(i %3 == 0 && i%5 == 0){
+        console.log(i, " fizzbuzz")
+        continue;
+    }
+    else if (i%3 ==0) {
+        console.log(i," fizz");
+        continue
+    }
+    else if (i%5 == 0) {
+        console.log(i," buzz");
+        continue;
+        
+    }
+    
+    
+}
+
+
+//OutPut
+
+/*
+0 " fizzbuzz"
+ques1.js:10 3 " fizz"
+ques1.js:14 5 " buzz"
+ques1.js:10 6 " fizz"
+ques1.js:10 9 " fizz"
+ques1.js:14 10 " buzz"
+ques1.js:10 12 " fizz"
+ques1.js:6 15 " fizzbuzz"
+ques1.js:10 18 " fizz"
+ques1.js:14 20 " buzz"
+ques1.js:10 21 " fizz"
+ques1.js:10 24 " fizz"
+ques1.js:14 25 " buzz"
+ques1.js:10 27 " fizz"
+ques1.js:6 30 " fizzbuzz"
+ques1.js:10 33 " fizz"
+ques1.js:14 35 " buzz"
+ques1.js:10 36 " fizz"
+ques1.js:10 39 " fizz"
+ques1.js:14 40 " buzz"
+ques1.js:10 42 " fizz"
+ques1.js:6 45 " fizzbuzz"
+ques1.js:10 48 " fizz"
+ques1.js:14 50 " buzz"
+ques1.js:10 51 " fizz"
+ques1.js:10 54 " fizz"
+ques1.js:14 55 " buzz"
+ques1.js:10 57 " fizz"
+ques1.js:6 60 " fizzbuzz"
+ques1.js:10 63 " fizz"
+ques1.js:14 65 " buzz"
+ques1.js:10 66 " fizz"
+ques1.js:10 69 " fizz"
+ques1.js:14 70 " buzz"
+ques1.js:10 72 " fizz"
+ques1.js:6 75 " fizzbuzz"
+ques1.js:10 78 " fizz"
+ques1.js:14 80 " buzz"
+ques1.js:10 81 " fizz"
+ques1.js:10 84 " fizz"
+ques1.js:14 85 " buzz"
+ques1.js:10 87 " fizz"
+ques1.js:6 90 " fizzbuzz"
+ques1.js:10 93 " fizz"
+ques1.js:14 95 " buzz"
+ques1.js:10 96 " fizz"
+ques1.js:10 99 " fizz"
+
+*/
+
+
+
+Q.2
+--->
+//Destructure the following object
+
+const student = {
+    name: "Madhuri",
+    age :21,
+    project:{tiktaktoe:" Two player game using python",
+}
+}
+
+
+ const {name,age,project:{tiktaktoe}} =student;
+
+ console.log(`Student name is ${name} ,Her age is ${age}.+AFw-nAnd ${name}'s project is : ${tiktaktoe}`)
+
+
+ /*
+Output:
+
+
+ Student name is Madhuri,Her age is 21.
+And Madhuri's project is :  Two player game using python
+  */
+
+
+Q.3
+--->
+
+
+/*
+Imagine you are going out to do some grocery shopping. 
+So you have an array called shoppingList with all the products you want to buy. 
+Javascript Essentials | Batch 1 
+ 
+Now that you are inside of the shop, you have a basket with all the products from your list, but you want to add a few more. 
+Create a new array called shoppingBasket, that will be a copy of the shoppingList array, and add some new products into it.
+*/
+
+
+let shopping_List =["Shirt","t-shirt","Perfume","goggles","Belt","Shoes","sandels",];
+
+console.log("My shopping list is: ",shopping_List);
+
+let Bucket_List  = [...shopping_List,"Headphones","Locket","Mobile Backcover"];
+
+console.log("My final Bucket List is : ",Bucket_List);
+
+
+Q.4
+-->
+
+let operation = Number(prompt(" Enter 1.ADD  2. Sub  3.Division 4. Multiplication 5. squareroot 6. percentage"));
+
+
+let num1 = Number(prompt("enter first Number")) ;
+let num2  =Number(prompt("enter second number"))
+
+switch (operation) {
+    case 1:
+        console.log("addition is : ",num1+-num2)
+        break;
+    case 2:
+        console.log("Subtitution is : ",num1-num2)
+        break;
+    case 3:
+        console.log("Division is : ",num1/num2)
+        break;
+    case 4:
+        console.log("Multiplication is : ",num1*num2)
+        break;
+    case 5:
+        console.log("squareroot is : ",Math.sqrt(num1+-num2))
+        break;
+    case 6:
+        console.log("percentage is : ",Math.floor(num1/num2*100))1;
+        break;
+    default:
+        console.log("Enter right Choice")
+        break;
+}
+
+
+Q.5
+-->
+
+
+function mycommission(){
+var amt=Number(document.getElementById("amount").value);
+var sum=0;
+
+switch (true) {
+case (amt>20000):{
+let val=Math.round((10/100)*amt);
+console.log(sum);
+sum=sum+-val;
+
+}
+case (amt>10001 || amt<20000):{
+let v=Math.round((7/100)*20000);
+console.log(sum);
+sum=sum+-v;
+
+}
+case (amt>5001 || amt<10000 ):{
+let a=Math.round((5/100)*10000);
+console.log(sum);
+sum=sum+-a;
+
+}
+case (amt>0||amt<5000):{
+let l=Math.round((2/100)*5000);
+console.log(sum);
+sum=sum+-l;
+console.log(l,sum);
+
+}
+default:
+document.getElementById('printamt').innerHTML="Your Commission is "+-sum+-".";
+break;
+}
+}
+
+Q.7
+-->
+
+The code using a label:
+
+let n = 10;
+
+nextPrime:
+for (let i = 2; i <= n; i+-+-) { // for each i...
+
+  for (let j = 2; j < i; j+-+-) { // look for a divisor..
+    if (i % j == 0) continue nextPrime; // not a prime, go next i
+  }
+
+  alert( i ); // a prime
+}
+
+Q.8 
+
+-->
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  () => alert("You agreed."),
+  () => alert("You canceled the execution.")
+);
